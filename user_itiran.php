@@ -13,7 +13,7 @@ if ($status = false) {
     exit("QueryError: " . $error[2]);
 } else {
     while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-      $view .= '<tr><td>'.$result["id"].'</td><td>'.$result["nickname"].'</td><td>'.$result["song"].'</td><td>'.$result["love"].'</td><td><a href="chat_room.php?id='.$result["id"].'">チャット開始</a></td></tr>';
+      $view .= '<tr><td>'.$result["id"].'</td><td>'.$result["nickname"].'</td><td>'.$result["song"].'</td><td>'.$result["love"].'</td><td><a href="chat_room.php?id='.$result["id"].'">チャット開始</a></td><td><a href="friend_act.php?id='.$result["id"].'">友達になる</a></td></tr>';
 
     }
 }
@@ -37,28 +37,45 @@ if ($status = false) {
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="homepage.php">やなぎなぎファンクラブ</a>
+        <a class="navbar-brand" href="homepage.php">やなぎなぎファンクラブ</a>
+    
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="itiran.php">スレッド一覧</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="thread_insert.php">スレッド作成</a>
+            </li>
+    
+            <li class="nav-item">
+              <a class="nav-link" href="user_itiran.php">    ユーザー一覧</a>
+            </li>
+    
+            <li class="nav-item">
+              <a class="nav-link" href="register.html">    sign up</a>
+            </li>
+    
+            <li class="nav-item">
+              <a class="nav-link" href="login.php">    ログイン</a>
+            </li>
+    
+            <li class="nav-item">
+              <a class="nav-link" href="login.php">    ログアウト</a>
+            </li>
 
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="itiran.php">スレッド一覧</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="thread_insert.php">スレッド作成</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="user_itiran.php">    ユーザー一覧</a>
-        </li>
-      </ul>
-  </nav>
+            <li class="nav-item">
+              <a class="nav-link" href="friend_view.php">    友達一覧</a>
+            </li>
+    
+          </ul>
+      </nav>
 
   <div class="container">
     <div class="panel panel-danger">
       <div class="table-responsive">
         <table class="table table-striped">
           <thead>
-            <tr><th>id</th><th>ニックネーム</th><th>好きな曲</th><th>一言</th><th>チャットをする</th></tr>
+            <tr><th>id</th><th>ニックネーム</th><th>好きな曲</th><th>一言</th><th>チャットをする</th><th>友達になる</th></tr>
           </thead>
             <tbody>
             <?php echo $view ?>

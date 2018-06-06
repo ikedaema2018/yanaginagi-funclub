@@ -7,27 +7,45 @@
   <link rel="stylesheet" href="./css/jquery-2.1.3.min.js">
   <link rel="stylesheet" href="./js/bootstrap.js">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-
-  <link rel="stylesheet" href="./css/style.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="./css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <title>ログイン</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="homepage.php">やなぎなぎファンクラブ</a>
+        <a class="navbar-brand" href="homepage.php">やなぎなぎファンクラブ</a>
+    
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="itiran.php">スレッド一覧</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="thread_insert.php">スレッド作成</a>
+            </li>
+    
+            <li class="nav-item">
+              <a class="nav-link" href="user_itiran.php">    ユーザー一覧</a>
+            </li>
+    
+            <li class="nav-item">
+              <a class="nav-link" href="register.html">    sign up</a>
+            </li>
+    
+            <li class="nav-item">
+              <a class="nav-link" href="login.php">    ログイン</a>
+            </li>
+    
+            <li class="nav-item">
+              <a class="nav-link" href="login.php">    ログアウト</a>
+            </li>
 
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="itiran.php">スレッド一覧</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="thread_insert.php">スレッド作成</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="user_itiran.php">    ユーザー一覧</a>
-        </li>
-      </ul>
-  </nav>
+            <li class="nav-item">
+              <a class="nav-link" href="friend_view.php">    友達一覧</a>
+            </li>
+    
+          </ul>
+      </nav>
 <div class="container jumbotron  top-30r">
   <h1 class="display-5 border-bottom bottom-30">ログイン</h1>
   <form method="post" action="login_act.php">
